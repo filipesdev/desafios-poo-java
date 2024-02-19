@@ -6,7 +6,6 @@ public class Student {
     public double avarage1;
     public double avarage2;
     public double avarage3;
-
     public double getAvarage() {
         return avarage1 + avarage2 + avarage3;
     }
@@ -18,5 +17,9 @@ public class Student {
          } else {
              return 0.0;
          }
+    }
+
+    public double calculateExtraPoints() {
+        return getAvarage() - 60;
     }
 }

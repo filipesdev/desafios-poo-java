@@ -17,21 +17,25 @@ public class Main {
         System.out.print("Enter your name: ");
         student.name = sc.nextLine();
 
+        System.out.print("Enter your first note : ");
         student.avarage1 = sc.nextDouble();
+
+        System.out.print("Enter your second note : ");
         student.avarage2 = sc.nextDouble();
+
+        System.out.print("Enter your third note : ");
         student.avarage3 = sc.nextDouble();
 
-        System.out.println("FINAL GRADE: " + student.getAvarage());
+        System.out.print(student.name);
+        System.out.println(", FINAL GRADE: " + student.getAvarage());
 
         if (student.getAvarage() < 60) {
-            System.out.println("FAILED");
-            System.out.printf("MISSING: %.2f POINTS%n", student.calculateMissingPoints());
-
+            System.out.println("Study more... FAILED");
+            System.out.printf("MISSING: %.2f POINT TO PASS%n", student.calculateMissingPoints());
         } else {
-            System.out.println("PASS");
+            System.out.printf("PASS WITH %.2f EXTRA POINTS:%n ", student.calculateExtraPoints());
         }
 
         sc.close();
-
     }
 }
