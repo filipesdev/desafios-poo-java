@@ -17,11 +17,13 @@ public class Main {
         int number = sc.nextInt();
 
         System.out.print("Enter account holder: ");
-        String holder = sc.next();
+        sc.nextLine();
+        String holder = sc.nextLine();
 
+        System.out.println();
 
         System.out.print("Is there an initial account deposit (y/n): ");
-        char response = sc.nextLine().charAt(0);
+        char response = sc.next().charAt(0);
         if (response == 'y') {
             System.out.print("Enter your initial deposit: ");
              double initialDeposit = sc.nextDouble();
