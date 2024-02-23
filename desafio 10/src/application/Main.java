@@ -28,13 +28,21 @@ public class Main {
         }
 
         int oldestUser = 0;
+          // o loop for começa com i igual a 1 porque sso é comum quando já inicializou oldestUser fora do loop com o valor 0.
+         // a ideia é começar a comparar as idades a partir do segundo usuário.
         for (int i = 1; i < registeredUsers; i++) {
-            if (userAge[i] > userAge[oldestUser]) {
+            
+          // comparando a idade do usuário na posição i com a idade do usuário na posição indiceMaisVelho. 
+          // se a idade de userAge[i] for maior que a idade do usuário mais velho até agora (representado por userAge[oldestUser]),
+          // atualizamos oldestUser para i, indicando que encontramos uma pessoa mais velha.
+            if (userAge[i] > userAge[oldestUser]) {  
                 oldestUser = i;
             }
         }
 
-        String oldestUserName = userName[oldestUser];
+        // pegando o indice da pessoa mais velha de oldestUser e usando para acessar o array userName[]
+        // e obter o nome da pessoa mais velha, que é armazenado na variável 
+        String oldestUserName = userName[oldestUser]; 
 
         System.out.println("Usuário mais velho(a): "+ oldestUserName);
 
