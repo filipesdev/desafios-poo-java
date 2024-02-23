@@ -30,12 +30,14 @@ public class Main {
 
         System.out.println("Alunos aprovados: ");
 
+        // Inicializa um loop que acontece até atingir o valor de numbersToExecute.
         for (int i = 0; i<numbersToExecute; i++) {
             calculate = (firstGrade[i] + secondGrade[i]) / 2;
 
             if (calculate > 6) {
                 avarageGrade = i;
 
+                // obtem o nome do estudante aprovado com base no índice avarageGrade
                 String approvedStudents = studentName[avarageGrade];
                 System.out.println(approvedStudents);
             }
